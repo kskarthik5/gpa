@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Draggable from 'react-draggable'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 const randomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -38,10 +38,12 @@ const grid = generateGrid()
 
 export default function Home() {
   const [coords, setCoords] = useState([0, 0])
+  const [w,setw]=useState(0)
   const [visibleGridView, setVisibleGridView] = useState(null)
   const [visibleGrid, setVisibleGrid] = useState(null)
   const defaultKeyState=[{ pos: [1, 4], val: 1 }, { pos: [3, 4], val: 2 }, { pos: [4, 2], val: 7 }]
   const [keys, setKeys] = useState(defaultKeyState)
+  const vref=useRef(null)
   const renderVisibleGridView = (arr) => {
     let count = 1;
     let res = [];
@@ -67,7 +69,9 @@ export default function Home() {
       setKeys(state=>{
         let temp=state.slice(0,keys.length-1)
         if(temp.length==0){
-          alert('pass')
+          // alert('pass')
+          setw(1000)
+          vref.current.play();
           return defaultKeyState;
         }
         else{
@@ -114,6 +118,7 @@ export default function Home() {
       </Head>
 
       <main>
+      <video ref={vref} width={w}><source src='../test.mp4' type="video/mp4"></source></video>
         <div>
           <div className='image-grid'>
             <img src={`https://i.imgur.com/ChmuZXI.png`}></img>
@@ -127,6 +132,7 @@ export default function Home() {
           </Draggable>
 
         </div>
+        {/* <video ref={vref}><source src='../test.mp4' type="video/mp4"></source></video> */}
       </main>
     </div>
 
