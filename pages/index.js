@@ -38,6 +38,7 @@ const grid = generateGrid()
 
 export default function Home() {
   const [coords, setCoords] = useState([0, 0])
+  const [count,setCount]=useState(0);
   const [w,setw]=useState(0)
   const [visibleGridView, setVisibleGridView] = useState(null)
   const [visibleGrid, setVisibleGrid] = useState(null)
@@ -69,9 +70,7 @@ export default function Home() {
       setKeys(state=>{
         let temp=state.slice(0,keys.length-1)
         if(temp.length==0){
-          // alert('pass')
-          setw(1000)
-          vref.current.play();
+          alert('pass')
           return defaultKeyState;
         }
         else{
@@ -118,7 +117,6 @@ export default function Home() {
       </Head>
 
       <main>
-      <video ref={vref} width={w}><source src='../test.mp4' type="video/mp4"></source></video>
         <div>
           <div className='image-grid'>
             <img src={`https://i.imgur.com/ChmuZXI.png`}></img>
