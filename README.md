@@ -2,7 +2,7 @@
 
 Graphical password authentication system targetted to be used as an alternative for traditional PIN system for authentication for payment services.
 
-#Pros - 
--Impossible to shoulder surf
--Much secure than 4 digit pin system. Can be adjusted to make it more secure
+## Pros 
+- Impossible to shoulder surf
+- Much secure than 4 digit pin system. Can be adjusted to make it more secure
 
