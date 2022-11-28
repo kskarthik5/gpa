@@ -11,7 +11,7 @@ Graphical password authentication system targetted to be used as an alternative 
 
 https://coolgpa.herokuapp.com/
 
-Drag the following in order to authenticate
-7 to blue square
-2 to green square
-1 to red sqaure
+Perform the following in order to authenticate
+- 7 to blue square
+- 2 to green square
+- 1 to red sqaure
