@@ -9,7 +9,7 @@ Graphical password authentication system targetted to be used as an alternative 
 
 ## Demo
 
-https://coolgpa.herokuapp.com/
+https://coolgpa.onrender.com/
 
 Perform the following in order to authenticate
 - 7 to blue square
